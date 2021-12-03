@@ -7,7 +7,7 @@ NOTE:
 - Target applications must be .NET files only.
 - If the target assembly has encrypted strings (from obfuscation),and the string is still present in the code it will be retrieved. (however in its encrypted state)
 - Supports x86 and x64 bit architecture files.
-
+- To build both architectures at the same time in Visual Studio, use batch build.(configurations are already made)
 
 ![image](https://user-images.githubusercontent.com/52993096/144455858-780a6792-5346-440c-9eba-f8b01cce6ed7.png)
 
