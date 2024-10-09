@@ -1,13 +1,18 @@
-StringExtractor
+# StringExtractor
 
-This program will allow for you to extract all user created strings from .NET files (.exe/.dll). It will not be using any enumeration for ldstr instructions as well as no memory access at all. This program is primarily using the #US stream to extract strings.
+StringExtractor is a tool designed to extract user-created strings from .NET files (.exe/.dll) by leveraging the `#US` stream. Unlike traditional methods, it does not rely on enumerating `ldstr` instructions or accessing memory directly, ensuring a streamlined and efficient extraction process.
 
-NOTE:
-- This program will not operate at all if the target application does not contain a #US stream. (as it is based on that)
-- Target applications must be .NET files only.
-- If the target assembly has encrypted strings (from obfuscation),and the string is still present in the code it will be retrieved. (however in its encrypted state)
-- Supports x86 and x64 bit architecture files.
-- To build both architectures at the same time in Visual Studio, use batch build.(configurations are already made)
+## Features
+- **Stream-Based Extraction**: Operates primarily using the `#US` stream to retrieve strings.
+- **Compatibility**: Supports both x86 and x64 architectures.
+- **Obfuscated Strings**: If an assembly has encrypted strings (due to obfuscation) but the encrypted data is still present, the tool will extract the strings in their encrypted state.
+
+## Requirements
+- The target application **must** contain a `#US` stream, as the tool is dependent on this.
+- Only compatible with **.NET files** (.exe/.dll).
+
+## Building
+To build for both x86 and x64 architectures simultaneously in Visual Studio, use the **Batch Build** feature. Configurations for both architectures are pre-configured.
 
 
 TO-DO:
